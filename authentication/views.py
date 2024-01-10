@@ -43,7 +43,7 @@ def login_view(request):
         password = request.POST['password']
 
         with connection.cursor() as cursor:
-            cursor.execute("SELECT * FROM users WHERE user_username = %s", [username])
+            cursor.execute("SELECT * FROM users WHERE user_username = %s AND created_by = 'Python'", [username])
             first_row = cursor.fetchone()
             columns = [col[0] for col in cursor.description]
  
@@ -73,7 +73,7 @@ def register_view(request):
         password = make_password(password)
 
         with connection.cursor() as cursor:
-            cursor.execute("SELECT * FROM users WHERE user_username = %s", [username])
+            cursor.execute("SELECT * FROM users WHERE user_username = %s AND created_by = 'Python'", [username])
             row_count = cursor.rowcount
 
             if row_count > 0:
