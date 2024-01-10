@@ -1,5 +1,5 @@
 # CRUD-Python
-This project implements a simple login and registration system using Node.js, Express, and a MySQL database. It provides functionalities for user authentication, registration, and redirection to a dashboard displaying registered users.
+This project implements a simple login and registration system using Python, Django, and a MySQL database. It provides functionalities for user authentication, registration, and redirection to a dashboard displaying registered users.
 
 ## Features
 
